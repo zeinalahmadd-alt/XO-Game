@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌓</button>
+        <div class="game" id="game-board">
+            <div class="title"><span>X O</span> Game</div>
+            <button class="restart-btn" id="restart-btn" aria-label="Restart game" onclick="reset()">↻</button>
+
+            <div class="square" id="item1" onclick="game(this.id)"></div>
+            <div class="square" id="item2" onclick="game(this.id)"></div>
+            <div class="square" id="item3" onclick="game(this.id)"></div>
+
+            <div class="square" id="item4" onclick="game(this.id)"></div>
+            <div class="square" id="item5" onclick="game(this.id)"></div>
+            <div class="square" id="item6" onclick="game(this.id)"></div>
+            
+            <div class="square" id="item7" onclick="game(this.id)"></div>
+            <div class="square" id="item8" onclick="game(this.id)"></div>
+            <div class="square" id="item9" onclick="game(this.id)"></div>
+        </div>
+        <div class="leaderboard">
+            <h2 class="leaderboard-title">🏆 Results</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Player / Winner</th>
+                        <th>Wins</th>
+                        <th>Draws</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="player-x">X</td>
+                        <td class="x-wins">0</td>
+                        <td class="x-draws">0</td>
+                        <td class="x-losses">0</td>
+                    </tr>
+                    <tr>
+                        <td class="player-o">O</td>
+                        <td class="o-wins">0</td>
+                        <td class="o-draws">0</td>
+                        <td class="o-losses">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="theme.js"></script>
+    <script src="ui-polish.js"></script>
+</body>
+</html>
